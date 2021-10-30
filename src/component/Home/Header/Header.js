@@ -1,9 +1,11 @@
 import React from 'react';
 import { Button, Container, Form, FormControl, Nav, Navbar } from 'react-bootstrap';
 import { NavLink } from 'react-router-dom';
+import useAuth from '../../../hooks/useAuth';
 import './Header.css';
 
 const Header = () => {
+  const {user, logOut} = useAuth();
   return (
     <div>
 <Navbar bg="dark" variant="dark" expand="lg" className="mb-1 p-3">
@@ -23,16 +25,13 @@ const Header = () => {
         <NavLink className="navlink" to="/manageOrders"> Manage All Orders</NavLink>
         <NavLink className="navlink" to="/addService"> Add A New Service</NavLink>
       </Nav>
-      <Form className="d-flex">
-        <FormControl
-          type="search"
-          placeholder="Search"
-          className="me-2"
-          aria-label="Search"
-        />
-        <Button variant="outline-success">Search</Button>
-        <NavLink className="navlink" to="/login">Login</NavLink>
-      </Form>
+      <div className="text-white">{user.displayName}</div>
+        <div className="ps-3">
+        {
+          user.email ? <NavLink className="btn btn-danger" onClick={logOut} to="/login">Logout</NavLink> : <NavLink className="btn btn-success" to="/login">Login</NavLink>
+        }
+        </div>
+        
     </Navbar.Collapse>
   </Container>
 </Navbar>

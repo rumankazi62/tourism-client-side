@@ -11,10 +11,12 @@ import Home from './component/Home/Home';
 import ManageOrders from './component/ManageOrders/ManageOrders';
 import AddService from './component/AddService/AddService';
 import UserLogin from './component/Login/UserLogin/UserLogin';
+import AuthProvider from './contexts/AuthProvider';
 
 function App() {
   return (
     <div className="App">
+      <AuthProvider>
       <Router>
         <Header></Header>
         <Switch>
@@ -41,6 +43,7 @@ function App() {
           </Route>
         </Switch>
       </Router>
+      </AuthProvider>
     </div>
   );
 }
