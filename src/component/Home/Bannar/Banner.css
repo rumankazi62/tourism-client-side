@@ -1,0 +1,10 @@
+.bannarImage {
+  margin: auto;
+  height: 450px;
+}
+@media only screen and (max-width: 600px) {
+  .bannarImage {
+    width: 200px;
+    height: 150px;
+  }
+}
