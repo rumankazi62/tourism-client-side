@@ -1,5 +1,7 @@
 import React from 'react';
 import { Button, Container, Form, FormControl, Nav, Navbar } from 'react-bootstrap';
+import { NavLink } from 'react-router-dom';
+import './Header.css';
 
 const Header = () => {
   return (
@@ -16,10 +18,10 @@ const Header = () => {
         style={{ maxHeight: '100px' }}
         navbarScroll
       >
-        <Nav.Link href="#action1">Home</Nav.Link>
-        <Nav.Link href="#action2">My Orders</Nav.Link>
-        <Nav.Link href="#action2"> Manage All Orders</Nav.Link>
-        <Nav.Link href="#action2"> Add A New Service</Nav.Link>
+        <NavLink className="navlink" to="/home">Home</NavLink>
+        <NavLink className="navlink" to="/myorders">My Orders</NavLink>
+        <NavLink className="navlink" to="/manageOrders"> Manage All Orders</NavLink>
+        <NavLink className="navlink" to="/addService"> Add A New Service</NavLink>
       </Nav>
       <Form className="d-flex">
         <FormControl
@@ -29,7 +31,7 @@ const Header = () => {
           aria-label="Search"
         />
         <Button variant="outline-success">Search</Button>
-        <Nav.Link href="#action2">Login</Nav.Link>
+        <NavLink className="navlink" to="/login">Login</NavLink>
       </Form>
     </Navbar.Collapse>
   </Container>

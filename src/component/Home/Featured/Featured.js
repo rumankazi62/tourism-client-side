@@ -10,7 +10,7 @@ import './Featured.css'
 const Featured = () => {
   return (
     <div className="mt-3">
-      <h1>FEATURED <span className="text-success">BLOG</span></h1>
+      <h1 className="py-5">FEATURED <span className="text-success">BLOG</span></h1>
 <Container>
   <Row>
     <Col>

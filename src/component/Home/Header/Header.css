@@ -1,0 +1,8 @@
+.navlink {
+  text-decoration: none;
+  color: aliceblue;
+  margin: 0 8px;
+}
+.navlink:hover {
+  color: greenyellow;
+}
