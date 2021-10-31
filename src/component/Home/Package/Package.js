@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import { Link } from 'react-router-dom';
 
 const Package = () => {
   const [services, setServices] = useState([]);
@@ -6,7 +7,7 @@ const Package = () => {
   useEffect(() => {
     fetch('http://localhost:5000/services')
     .then(res => res.json())
-    .then(data => setServices(data))
+    .then(data => setServices(data.slice(0,6)))
   }, [])
   return (
     <div className="row">
@@ -20,8 +21,11 @@ const Package = () => {
           <img className="w-100" style={{height:"200px"}} src={service.img} alt="" />
           <h3>{service.name}</h3>
           <p>{service.description}</p>
-          <h5>Cost: {service.cost}K</h5>
-          <button className="btn btn-outline-success">Book Now</button>
+          <h5>Cost: {service.cost} Taka</h5>
+          <button 
+          // onClick={() => props.handleAddToCart(props.product)}
+            className="btn btn-outline-success">Book Now</button>
+          
         </div>)
       }
     </div>

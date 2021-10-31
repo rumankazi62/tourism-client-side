@@ -12,6 +12,8 @@ import ManageOrders from './component/ManageOrders/ManageOrders';
 import AddService from './component/AddService/AddService';
 import UserLogin from './component/Login/UserLogin/UserLogin';
 import AuthProvider from './contexts/AuthProvider';
+import PrivateRoute from './component/Login/PrivateRoute/PrivateRoute';
+import AllPackage from './component/AllPackage/AllPackage';
 
 function App() {
   return (
@@ -26,15 +28,18 @@ function App() {
           <Route path="/home">
             <Home></Home>
           </Route>
-          <Route path="/myorders">
+          <PrivateRoute path="/package">
+            <AllPackage></AllPackage>
+          </PrivateRoute>
+          <PrivateRoute path="/myorders">
             <MyOrders></MyOrders>
-          </Route>
-          <Route path="/manageOrders">
+          </PrivateRoute>
+          <PrivateRoute path="/manageOrders">
             <ManageOrders></ManageOrders>
-          </Route>
-          <Route path="/addService">
+          </PrivateRoute>
+          <PrivateRoute path="/addService">
             <AddService></AddService>
-          </Route>
+          </PrivateRoute>
           <Route path="/login">
             <UserLogin></UserLogin>
           </Route>
