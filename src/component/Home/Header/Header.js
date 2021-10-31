@@ -21,9 +21,8 @@ const Header = () => {
         navbarScroll
       >
         <NavLink className="navlink" to="/home">Home</NavLink>
-        <NavLink className="navlink" to="/package">All Package</NavLink>
+        <NavLink className="navlink" to="/package">Manage All Package</NavLink>
         <NavLink className="navlink" to="/myorders">My Orders</NavLink>
-        <NavLink className="navlink" to="/manageOrders"> Manage All Orders</NavLink>
         <NavLink className="navlink" to="/addService"> Add A New Service</NavLink>
       </Nav>
       <div className="text-white">{user.displayName}</div>
