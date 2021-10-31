@@ -8,7 +8,6 @@ import {
 import Nopage from './component/Nopage/Nopage';
 import MyOrders from './component/MyOrders/MyOrders';
 import Home from './component/Home/Home';
-import ManageOrders from './component/ManageOrders/ManageOrders';
 import AddService from './component/AddService/AddService';
 import UserLogin from './component/Login/UserLogin/UserLogin';
 import AuthProvider from './contexts/AuthProvider';
@@ -33,9 +32,6 @@ function App() {
           </PrivateRoute>
           <PrivateRoute path="/myorders">
             <MyOrders></MyOrders>
-          </PrivateRoute>
-          <PrivateRoute path="/manageOrders">
-            <ManageOrders></ManageOrders>
           </PrivateRoute>
           <PrivateRoute path="/addService">
             <AddService></AddService>
