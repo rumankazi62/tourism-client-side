@@ -5,12 +5,12 @@
   width: 40%;
   margin: auto;
 }
-.btn {
+.subBtn {
   background-color: lightcoral;
   color: aliceblue;
   font-size: 20px;
 }
-.btn:hover {
+.subBtn:hover {
   background-color: rgb(207, 243, 255);
   border: 1px solid lightcoral;
 }

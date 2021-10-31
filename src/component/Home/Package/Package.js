@@ -13,7 +13,7 @@ const Package = () => {
       <h1 className="py-5">Tour <span className="text-success">Package</span></h1>
       {
         services.map(
-        service => <div 
+        service => <div
         className="col-lg-4 border border-1 p-2 g-2"
         key={service._id}
          >
@@ -24,7 +24,6 @@ const Package = () => {
           <button 
           // onClick={() => props.handleAddToCart(props.product)}
             className="btn btn-outline-success">Book Now</button>
-          
         </div>)
       }
     </div>

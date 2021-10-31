@@ -24,13 +24,17 @@ const Footer = () => {
     
     <Col>
     <div>
-      <h3>Socials</h3>
+      <h3>Conact Now</h3>
     </div>
     <div>
     <i className="fab fa-facebook fs-5 me-3"></i>
     <i className="fab fa-instagram fs-5 me-3"></i>
     <i className="fab fa-youtube fs-5 me-3"></i>
     <i className="fab fa-twitter fs-5"></i>
+    </div>
+    <div>
+      019 00 00 00 11
+      travelagency@gmail.com
     </div>
     </Col>
   </Row>

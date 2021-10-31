@@ -22,7 +22,7 @@ const AddService = () => {
       <input {...register("name")} placeholder="Title"/>
       <textarea {...register("description")} placeholder="Description"/>
       <input type="number" {...register("cost")} placeholder="Cost"/>
-      <input className="btn" type="submit" />
+      <input className="btn subBtn" type="submit" />
     </form>
     </div>
   );
